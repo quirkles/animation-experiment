@@ -7,7 +7,7 @@ div#happy-birthday {
 }
 div#happy-birthday > p {
     font-family: 'Fredoka One', cursive;
-    font-size: 150px;
+    font-size: 15rem;
     margin: 0;
     background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
     -webkit-background-clip: text;
