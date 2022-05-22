@@ -9,8 +9,7 @@ function App() {
                     padding: "1rem 0",
                 }}
             >
-                <Link to="/invoices">Invoices</Link> |{" "}
-                <Link to="/expenses">Expenses</Link> | {" "}
+                <Link to="/happy-birthday">Happy Birthday</Link> |{" "}
                 <Link to="/animation">Animation</Link>
             </nav>
             <main>

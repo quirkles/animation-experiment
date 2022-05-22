@@ -30,7 +30,6 @@ const handleKeyDown = (animationObjects: { scene: Scene, camera: PerspectiveCame
 }
 
 export default function Animation() {
-    console.log('Animation: start') //eslint-disable-line
     let isRendering = false
     let smoothRotation = false
     let animationBoxRef: RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null)
@@ -44,7 +43,7 @@ export default function Animation() {
 
     const flipSmoothRotation = () => {
         smoothRotation = !smoothRotation
-        setTimeout(flipSmoothRotation, Math.random() * 2000)
+        setTimeout(flipSmoothRotation, Math.random() * 1250)
     }
 
     setTimeout(flipSmoothRotation, 3)
@@ -78,7 +77,6 @@ export default function Animation() {
     }
 
     useEffect(() => {
-        console.log('useEffect: start ') //eslint-disable-line
         if(!animationBoxRef || !animationBoxRef.current) {
             throw new Error('Failed to load canvas')
         }
@@ -106,7 +104,6 @@ export default function Animation() {
         requestAnimationFrame(updateAndRender)
 
         return () => {
-            console.log('useEffect return function called') //eslint-disable-line
             isRendering = false
             document.removeEventListener('keydown', keyDownHandler)
             renderer?.dispose()

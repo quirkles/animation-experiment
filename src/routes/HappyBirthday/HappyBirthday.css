@@ -1,0 +1,17 @@
+div#happy-birthday {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: url("../../assets/pixel-heart.webp");
+    height: 100%;
+}
+div#happy-birthday > p {
+    font-family: 'Fredoka One', cursive;
+    font-size: 150px;
+    margin: 0;
+    background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
