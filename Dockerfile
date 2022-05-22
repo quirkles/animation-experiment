@@ -3,10 +3,12 @@ FROM node:16
 # Create app directory
 WORKDIR /app
 
-COPY dist dist
-COPY server server
+COPY . .
 
 RUN cd server && npm install
+RUN npm install && npm run build
+
+RUN rm -rf src
 
 EXPOSE 3030
 
