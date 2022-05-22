@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ReactDOM from 'react-dom/client'
 
 import App from './App'
@@ -13,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               <Route path="/" element={<App />}>
                 <Route path="happy-birthday" element={<HappyBirthday />} />
                 <Route path="animation" element={<Animation />} />
+                <Route path="/" element={<Navigate replace to="/happy-birthday" />} />
+                <Route path="*" element={<Navigate replace to="/happy-birthday" />} />
               </Route>
           </Routes>
       </BrowserRouter>
